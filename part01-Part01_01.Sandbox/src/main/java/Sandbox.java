@@ -4,9 +4,15 @@
 public class Sandbox {
 
     public static void main(String[] args) {
-        int num = 2147483647;
+        int first = (1 + 1);
+        int second = first + 3 * (2 + 5);
         
-        System.out.println(num);
+        first = 5;
+        int third = first + second;
         
+        
+        System.out.println(first); // 5
+        System.out.println(second); // 12
+        System.out.println(third); // 17
     }
 }
