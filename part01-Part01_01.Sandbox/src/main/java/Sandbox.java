@@ -4,15 +4,12 @@
 public class Sandbox {
 
     public static void main(String[] args) {
-        int first = (1 + 1);
-        int second = first + 3 * (2 + 5);
+        int num = 8;
         
-        first = 5;
-        int third = first + second;
-        
-        
-        System.out.println(first); // 5
-        System.out.println(second); // 12
-        System.out.println(third); // 17
+        if(num > 9) {
+            System.out.println(num + " is greater than 9");
+        } else {
+            System.out.println(num + " is NOT greater than 9");
+        }
     }
 }
