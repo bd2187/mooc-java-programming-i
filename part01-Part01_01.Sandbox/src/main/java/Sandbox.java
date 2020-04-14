@@ -4,12 +4,13 @@
 public class Sandbox {
 
     public static void main(String[] args) {
-        int num = 8;
+        int num = 1;
+        int num2 = 1;
         
-        if(num > 9) {
-            System.out.println(num + " is greater than 9");
-        } else {
-            System.out.println(num + " is NOT greater than 9");
+        System.out.println(num == num2);
+        
+        if(true) {
+            System.out.println("yo");
         }
     }
 }
