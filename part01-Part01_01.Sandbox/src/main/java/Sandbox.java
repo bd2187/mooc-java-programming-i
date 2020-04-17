@@ -6,18 +6,22 @@ public class Sandbox {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        int number = 0;
+
         while (true) {
-            System.out.println("Exit? (y = yes)");
-            String res = scanner.nextLine();
-            
-            if(res.equals("y")) {
+            number = number + 1;
+
+            if (number >= 5) {
                 break;
             }
-            
-            System.out.println("keep going");
-            
+
+            if (number < 5) {
+                continue;
+            }
+
+            System.out.print(number + " ");
         }
-        
-        System.out.println("out");
+
+        System.out.print(number + " ");
     }
 }
