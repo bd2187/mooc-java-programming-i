@@ -30,5 +30,8 @@ public class Sandbox {
             // The task is to print out the total of ones
             System.out.println("The total of ones: " + ones);
         }
+        
+        int middle = 15 / 2;
+        System.out.println(middle);
     }
 }
