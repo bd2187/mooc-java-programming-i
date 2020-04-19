@@ -4,7 +4,21 @@ public class Greatest {
     public static int greatest(int number1, int number2, int number3) {
         //write some code here
 
-        return -1;
+        int greatestFromFirstSet;
+        
+        if(number1 > number2) {
+            greatestFromFirstSet = number1;
+        } else {
+            greatestFromFirstSet = number2;
+        }
+        
+        if(greatestFromFirstSet > number3) {
+            return greatestFromFirstSet;
+        } else {
+            return number3;
+        }
+        
+        
     }
 
     public static void main(String[] args) {
