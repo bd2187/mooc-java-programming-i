@@ -1,24 +1,32 @@
-
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class GreatestInList {
-
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+        
         Scanner scanner = new Scanner(System.in);
-
-        ArrayList<Integer> list = new ArrayList<>();
-        while (true) {
-            int input = Integer.valueOf(scanner.nextLine());
-            if (input == -1) {
+        
+        ArrayList<Integer> numbers = new ArrayList<> ();
+        while(true) {
+            Integer input = Integer.valueOf(scanner.nextLine());
+            
+            if(input == -1) {
                 break;
+            } else {
+                numbers.add(input);
             }
-
-            list.add(input);
         }
         
-        System.out.println("");
-
-        // implement finding the greatest number in the list here
+        int greatestNumber = 0;
+        
+        for(int i = 0; i < numbers.size(); i++) {           
+            if(numbers.get(i) > greatestNumber) {
+                greatestNumber = numbers.get(i);
+            }
+        }
+        
+        System.out.println("The greatest number is: " + greatestNumber);
+        
+        
     }
 }
