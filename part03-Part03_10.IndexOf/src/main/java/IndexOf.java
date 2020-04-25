@@ -17,8 +17,11 @@ public class IndexOf {
             list.add(input);
         }
 
-        System.out.println("");
+        System.out.println("Smallest number?");
+        Integer index = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println(list.get(index) + " is at index " + index);
 
-        // implement here finding the indices of a number
+        
     }
 }
