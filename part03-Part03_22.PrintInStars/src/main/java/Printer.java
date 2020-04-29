@@ -1,4 +1,3 @@
-
 public class Printer {
 
     public static void main(String[] args) {
@@ -8,7 +7,18 @@ public class Printer {
     }
 
     public static void printArrayInStars(int[] array) {
-        // Write some code in here
+        
+        for(int i = 0; i < array.length; i++) {
+            
+            int num = array[i];
+            String stars = "";
+            while(num > 0) {
+                stars += "*";
+                num--;
+            }
+            System.out.println(stars);            
+            
+        }
     }
 
 }
