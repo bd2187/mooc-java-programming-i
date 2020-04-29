@@ -1,3 +1,11 @@
+/*
+    The class SumOfArray has a method public static int
+    sumOfNumbersInArray(int[] array). Complete the method so
+    that it computes and returns the sum of the numbers in
+    the array it receives as parameter.
+
+    You can try out the computation of the sum with this example:
+*/
 
 public class SumOfArray {
 
@@ -8,7 +16,13 @@ public class SumOfArray {
     }
 
     public static int sumOfNumbersInArray(int[] array) {
-        // Write some code here
-        return 0;
+        
+        int sum = 0;
+        
+        for(int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        
+        return sum;
     }
 }
