@@ -8,9 +8,10 @@ public class Sandbox {
         
         bob.printInfo();
         
-        bob.updateAge(50);
+        int age = bob.updateAge();
         
-        bob.printInfo();
+        
+        System.out.println(age);
         
     }
 }

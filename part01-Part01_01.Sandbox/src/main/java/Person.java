@@ -11,7 +11,9 @@ public class Person {
         System.out.println(this.name + " is " + this.age + " years old.");
     }
     
-    public void updateAge(int age) {
-        this.age = age;
+    public int updateAge() {
+        this.age += 1;
+        
+        return age;
     }
 }
