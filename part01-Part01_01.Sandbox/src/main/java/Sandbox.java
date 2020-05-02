@@ -1,15 +1,16 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Sandbox {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);        
         
-        ArrayList<String> myList = new ArrayList<>();
+        Person bob = new Person("bob");
         
-        myList.add("first");
-        myList.add("second");
+        bob.printInfo();
         
-        System.out.println(myList.get(0));
+        bob.updateAge(50);
+        
+        bob.printInfo();
+        
     }
 }
