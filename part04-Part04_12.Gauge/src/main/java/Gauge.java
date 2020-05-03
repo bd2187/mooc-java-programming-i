@@ -6,14 +6,14 @@ public class Gauge {
     }
     
     public void increase() {
-        if(this.value >= 5) {            
-            this.value++;
+        if(this.value < 5) {            
+            this.value += 1;
         }        
     }
     
     public void decrease() {
-        if(this.value <= 0) {
-            this.value--;
+        if(this.value > 0) {
+            this.value -= 1;
         }
     }
     
