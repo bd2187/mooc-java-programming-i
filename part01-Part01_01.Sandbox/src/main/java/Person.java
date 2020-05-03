@@ -6,10 +6,11 @@ public class Person {
         this.age = 0;
         this.name = initialName;
     }
-    
-    public void printInfo() {
-        System.out.println(this.name + " is " + this.age + " years old.");
+ 
+    public String toString() {
+        return this.name + " is " + this.age + " years old.";
     }
+    
     
     public int updateAge() {
         this.age += 1;

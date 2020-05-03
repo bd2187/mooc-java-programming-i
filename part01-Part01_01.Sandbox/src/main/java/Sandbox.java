@@ -6,12 +6,12 @@ public class Sandbox {
         
         Person bob = new Person("bob");
         
-        bob.printInfo();
+        
         
         int age = bob.updateAge();
         
         
-        System.out.println(age);
+        System.out.println(bob);
         
     }
 }
