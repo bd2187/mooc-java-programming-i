@@ -23,8 +23,22 @@ public class StoringRecords {
     public static ArrayList<Person> readRecordsFromFile(String file) {
         ArrayList<Person> persons = new ArrayList<>();
 
-        // Write here the code for reading from file
-        // and printing the read records
+        try(Scanner fileReader= new Scanner(Paths.get(file))) {
+            
+            while(fileReader.hasNextLine()) {
+                String line = fileReader.nextLine();
+                String[] lineArr = line.split(",");
+                String name = lineArr[0];
+                int age = Integer.valueOf(lineArr[1]);
+                
+                persons.add(new Person(name, age));
+                
+            }
+            
+        } catch(Exception err) {
+            
+        }
+        
         return persons;
 
     }
