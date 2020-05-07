@@ -7,11 +7,13 @@ public class Sandbox {
         Person bob = new Person("bob");
         
         
+        String name = bob.getName();
         
-        int age = bob.updateAge();
+        System.out.println(name);
         
+        name = "foo";
         
-        System.out.println(bob);
+        System.out.println(name);
         
     }
 }
