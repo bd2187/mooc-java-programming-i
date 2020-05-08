@@ -16,6 +16,9 @@ public class Sandbox {
         joan = new Person("Joan B.");
         System.out.println(joan);
         
+        ball = null;
+        
         System.out.println(ball);
+        System.out.println(joan);
     }
 }
