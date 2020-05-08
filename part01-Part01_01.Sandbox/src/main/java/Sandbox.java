@@ -4,16 +4,18 @@ public class Sandbox {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);        
         
-        Person bob = new Person("bob");
+        Person joan = new Person("Joan Ball");
+        System.out.println(joan);
+
+        Person ball = joan;
+        ball.growOlder();
+        ball.growOlder();
+
+        System.out.println(joan);
+
+        joan = new Person("Joan B.");
+        System.out.println(joan);
         
-        
-        String name = bob.getName();
-        
-        System.out.println(name);
-        
-        name = "foo";
-        
-        System.out.println(name);
-        
+        System.out.println(ball);
     }
 }
