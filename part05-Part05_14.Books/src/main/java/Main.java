@@ -17,9 +17,13 @@ public class Main {
 
             System.out.println("Publication year:");
             int publicationYear = Integer.valueOf(scanner.nextLine());
+            
+            // if the book already exists in the array, don't add it            
             Book book = new Book(name, publicationYear);
-            books.add(book);
-
+            if(!books.contains(book)) {
+                books.add(book);    
+            }
+            
         }
         
         // NB! Don't alter the line below!
