@@ -4,21 +4,14 @@ public class Sandbox {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);        
         
-        Person joan = new Person("Joan Ball");
-        System.out.println(joan);
+        Bird red = new Bird("Red");
+        System.out.println(red);
 
-        Person ball = joan;
-        ball.growOlder();
-        ball.growOlder();
+        Bird chuck = new Bird("Chuck");
+        System.out.println(chuck);
 
-        System.out.println(joan);
-
-        joan = new Person("Joan B.");
-        System.out.println(joan);
-        
-        ball = null;
-        
-        System.out.println(ball);
-        System.out.println(joan);
+        if (red.equals(chuck)) {
+            System.out.println(red + " equals " + chuck);
+        }
     }
 }
