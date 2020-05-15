@@ -19,4 +19,30 @@ public class SimpleCollection {
         return this.elements;
     }
     
+    @Override
+    public String toString() {
+        if(this.elements.isEmpty()) {
+            return "The collection " + name + " is empty.";
+        } else {
+            
+            int amount = this.elements.size();
+            String elementsStr = "";
+            if(amount > 1) {
+                elementsStr = "elements";
+            } else {
+                elementsStr = "element";
+            }
+            
+            String value = "The colletion " +  name + " has " + amount + " " + elementsStr + ": \n";
+            
+            
+            for(String letter: this.elements) {
+                value += letter + "\n";
+            }
+            
+            return value;
+            
+        }
+    }
+    
 }
