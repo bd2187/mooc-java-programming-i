@@ -13,5 +13,9 @@ public class Sandbox {
         if (red.equals(chuck)) {
             System.out.println(red + " equals " + chuck);
         }
+        
+        String foo = "hello";
+        
+        System.out.println(foo.length());
     }
 }

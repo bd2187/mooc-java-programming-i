@@ -1,10 +1,12 @@
 
 import java.util.Objects;
+import java.util.ArrayList;
 
 public class Message {
 
     private String sender;
     private String content;
+    private ArrayList<Message> messages;
 
     public Message(String sender, String content) {
         this.sender = sender;
@@ -21,6 +23,16 @@ public class Message {
 
     public String toString() {
         return this.sender + ": " + this.content;
+    }
+    
+    public void add(Message message) {
+        if(message.getContent().length()<= 280) {
+            this.messages.add(message);
+        }
+    }
+    
+    public ArrayList<Message> getMessages() {
+        return this.messages;
     }
 
     // created using the "insert code" feature of NetBeans
