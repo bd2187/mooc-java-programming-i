@@ -5,50 +5,53 @@ import java.util.Scanner;
 public class Searching {
 
     public static void main(String[] args) {
-        // The program below is meant for testing the search algorithms you'll write
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Book> books = new ArrayList<>();
-        System.out.println("How many books to create?");
-        int numberOfBooks = Integer.valueOf(scanner.nextLine());
-        for (int i = 0; i < numberOfBooks; i++) {
-            books.add(new Book(i, "name for the book " + i));
-        }
+        ArrayList<Book> books = new ArrayList<> ();
 
-        System.out.println("Id of the book to search for?");
-        int idToSearchFor = Integer.valueOf(scanner.nextLine());
-
-        System.out.println("");
-        System.out.println("Searching with linear search:");
-        long start = System.currentTimeMillis();
-        int linearSearchId = linearSearch(books, idToSearchFor);
-        System.out.println("The search took " + (System.currentTimeMillis() - start) + " milliseconds.");
-        if (linearSearchId < 0) {
-            System.out.println("Book not found");
-        } else {
-            System.out.println("Found it! " + books.get(linearSearchId));
-        }
-
-        System.out.println("");
-
-        System.out.println("");
-        System.out.println("Seaching with binary search:");
-        start = System.currentTimeMillis();
-        int binarySearchId = binarySearch(books, idToSearchFor);
-        System.out.println("The search took " + (System.currentTimeMillis() - start) + " milliseconds.");
-        if (binarySearchId < 0) {
-            System.out.println("Book not found");
-        } else {
-            System.out.println("Found it! " + books.get(binarySearchId));
-        }
+        Book foo = new Book(507976, "507976");
+        
+        books.add(foo);
+        
+        binarySearch(books, 507976);
 
     }
 
-    public static int linearSearch(ArrayList<Book> books, int searchedId) {
-        return -1;
+    public static int linearSearch(ArrayList<Book> books, int searchedId) {        
+        int index = -1;
+        for(int i = 0; i < books.size(); i++) {
+            if(searchedId == books.get(i).getId()) {
+                index = i;
+            }
+        }        
+        return index;
     }
 
+    
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
+        
+        int startIndex = 0;
+        int sizeOfArr = books.size() - 1; 
+        
+        while(startIndex <= sizeOfArr) {
+            
+            int middleIndex = (sizeOfArr + startIndex) / 2; // 2
+            int middleBookID = books.get(middleIndex).getId();
+            
+            System.out.println(middleBookID);
+            if(middleBookID == searchedId) {
+                return middleIndex;
+            }
+            
+            if(searchedId > middleBookID) {
+                startIndex = middleIndex + 1;                
+            }
+            
+            if(searchedId < middleBookID) {
+                sizeOfArr = sizeOfArr - 1;
+            }
+        }
+        
         return -1;
+        
     }
 }
 
