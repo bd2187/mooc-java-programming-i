@@ -30,14 +30,14 @@ public class RecipeSearch {
             
             int counter = 0;
             String recipeToPrint = "";
+            String res = "";
             try(Scanner file = new Scanner(Paths.get(fileName))) {
             
                 while(file.hasNextLine()) {
                     
                     String line = file.nextLine();
-                    if(line.trim().equals("")) {
-                        
-                        System.out.println(recipeToPrint);
+
+                    if(line.trim().equals("")) {                        
                         counter = 0;
                         recipeToPrint = "";                        
                     } else {
@@ -47,13 +47,13 @@ public class RecipeSearch {
                         } else if(counter == 1) {
                             
                             recipeToPrint += "cooking time: " + line;
+                                                        
                         }
                         counter++;                                               
-                    }
-                    
-                    
-                    
+                    }                                                           
                 }
+                
+                
 
                 
             } catch(Exception e) {
